@@ -1,0 +1,7 @@
+-cp src
+-main gulp.Main
+-js tmp/main.js
+-dce full
+-D analyzer
+-lib jsrequire
+--macro jsrequire.JSRequire.npmInstall(true)
