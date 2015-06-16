@@ -14,6 +14,7 @@ import gulp.AGulpStream;
   public static function task():Void;
   public static function src(glob:String):AGulpStream;
   public static function dest(path:String):Dynamic;
+  @:overload(function(glob:Array<String>,fn:Void->Void):Void{})
   @:overload(function(glob:String,fn:Void->Void):Void{})
   public static function watch():AGulpStream;
 }

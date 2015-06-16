@@ -50,6 +50,25 @@ gulp_Main.main = function() {
 		var this2 = tmp5;
 		this2.pipe(plugin1);
 	});
+	gulp.watch("*.json",function() {
+		var this5 = gulp.src("*.json");
+		this5.pipe(gulp.dest("/a"));
+	});
+	gulp.watch(["*.json","*.txt"],function() {
+		var tmp7;
+		var tmp8;
+		var stream7 = gulp.src("*.json");
+		tmp8 = stream7;
+		var this7 = tmp8;
+		var tmp9;
+		var stream8 = gulp.src("*.txt");
+		tmp9 = stream8;
+		var stream6 = tmp9;
+		var new_stream2 = merge2(this7,stream6);
+		tmp7 = new_stream2;
+		var this6 = tmp7;
+		this6.pipe(gulp.dest("/a"));
+	});
 };
 gulp_Main.main();
 })(typeof console != "undefined" ? console : {log:function(){}});

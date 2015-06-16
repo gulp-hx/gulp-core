@@ -42,6 +42,16 @@ class Main {
 
     });
 
+    Gulp.watch('*.json',function() {
+      '*.json'.to_src() >> '/a';
+    });
+
+    Gulp.watch(['*.json','*.txt'],function() {
+      ('*.json':AGS) + '*.txt' >> '/a';
+    });
+
+
+
 
   }
 }
