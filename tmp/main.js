@@ -13,6 +13,7 @@ gulp_Main.main = function() {
 		gulp.src("*.json");
 	});
 	gulp.task("task",function(cb1) {
+		console.log("hello");
 		cb1();
 	});
 	gulp.task(["a","b","c"],function() {

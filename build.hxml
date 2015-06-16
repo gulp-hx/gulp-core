@@ -3,5 +3,5 @@
 -js tmp/main.js
 -dce full
 -D analyzer
--lib jsrequire
+-lib jsrequire tink_lang
 --macro jsrequire.JSRequire.npmInstall(true)
