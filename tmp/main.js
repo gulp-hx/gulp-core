@@ -3,21 +3,21 @@ var merge2 = require("merge2");
 var gulp = require("gulp");
 var gulp_Main = function() { };
 gulp_Main.main = function() {
-	gulp.task("pippa",function() {
+	gulp.task("task",function() {
 		gulp.src("pippo").pipe("x");
 	});
-	gulp.task("pippa",function(cb) {
+	gulp.task("task",function(cb) {
 		cb();
 	});
-	gulp.task("pippa",function() {
+	gulp.task("task",function() {
 		gulp.src("*.json");
 	});
-	gulp.task("pippa",function(cb1) {
+	gulp.task("task",function(cb1) {
 		cb1();
 	});
 	gulp.task(["a","b","c"],function() {
 	});
-	gulp.task("pippa",function() {
+	gulp.task("task",function() {
 		var tmp;
 		var stream1 = gulp.src("*.json");
 		tmp = stream1;

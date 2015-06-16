@@ -5,21 +5,21 @@ using gulp.GulpTools;
 
 class Main {
   static function main() {
-    Gulp.task('pippa',function() {
+    Gulp.task('task',function() {
       Gulp.src('pippo').pipe('x');
     });
 
-    Gulp.task('pippa',function(cb) {
+    Gulp.task('task',function(cb) {
       cb();
     });
 
 
 
-    'pippa'.to_task(function() {
+    'task'.to_task(function() {
       '*.json'.to_src();
     });
 
-    'pippa'.to_task(function(cb) {
+    'task'.to_task(function(cb) {
       cb();
     });
 
@@ -28,7 +28,7 @@ class Main {
 
     });
 
-    'pippa'.to_task(function() {
+    'task'.to_task(function() {
       var stream:AGulpStream = '*.json';
       var myStream = stream + '*.json' + '*.txt';
       trace(myStream);
