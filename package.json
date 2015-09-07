@@ -5,7 +5,13 @@
   "main": "gulp.js",
   "dependencies": {
     "merge2": "~0.3.6",
-    "gulp": "^3.9.0"
+    "gulp": "^3.9.0",
+    "gulp-bower-files": "^0.2.7",
+    "gulp-main-bower-files": "^1.2.1",
+    "gulp-uglify": "^1.4.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-md5": "^0.1.1",
+    "json-manifest": "^1.0.1"
   },
   "devDependencies": {},
   "scripts": {

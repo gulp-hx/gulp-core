@@ -1,6 +1,31 @@
 package gulp;
 import gulp.AGulpStream;
 
+
+@:jsRequire("json-manifest") @:native('jsonManifest') extern class JsonManifest {
+  @:selfCall static public function _(folder:String,glob:String):AGS;
+}
+
+@:jsRequire("gulp-md5") @:native('md5') extern class MD5 {
+  @:selfCall static public function _(?opts:Dynamic):AGS;
+}
+
+@:jsRequire("gulp-rename") @:native('rename') extern class Rename {
+  @:selfCall static public function _(?opts:Dynamic):AGS;
+}
+
+
+@:jsRequire("gulp-uglify") @:native('uglify') extern class Uglify {
+  @:selfCall static public function _(?opts:Dynamic):AGS;
+}
+
+
+@:jsRequire("gulp-main-bower-files") @:native('mainBowerFiles') extern class Bower {
+  @:selfCall static public function _(?opts:Dynamic):AGS;
+}
+
+
+
 @:jsRequire("merge2") @:native('merge2') extern class Merge {
   @:selfCall static public function _(streamA:AGS,streamB:AGS):AGS;
 }

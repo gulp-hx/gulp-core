@@ -2,11 +2,32 @@ package gulp;
 import gulp.Gulp;
 import gulp.AGulpStream;
 import gulp.Gulp.*;
+import js.node.Fs;
 
 using gulp.GulpTools;
 
 @:tink class Main {
   static function main() {
+
+
+  'bower'.to_task() => @do {
+
+
+    'bower.json'.to_src()
+      << Bower._()
+      << Uglify._()
+      << MD5._()
+      << Rename._([path] => path.extname = ".min.js" )
+      >> 'js';
+  };
+
+
+  'manifest'.to_task(['bower']) => @do {
+    var file = Fs.createWriteStream('file.txt');
+    JsonManifest._('js','*/*.min.js') << file;
+  }
+
+/*
     task('task',function() {
       Gulp.src('pippo').pipe('x');
     });
@@ -56,7 +77,7 @@ using gulp.GulpTools;
       ('*.json':AGS) + '*.txt' >> '/a';
     }
 
-
+*/
 
 
   }

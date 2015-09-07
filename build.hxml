@@ -1,7 +1,7 @@
 -cp src
 -main gulp.Main
--js gulpfile.js
+-js assets/gulpfile.js
 -dce full
 -D analyzer
--lib jsrequire tink_lang
+-lib jsrequire tink_lang hxnodejs
 --macro jsrequire.JSRequire.npmInstall(true)
