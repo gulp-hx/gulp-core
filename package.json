@@ -1,15 +1,24 @@
 {
-  "name": "gulp.hx",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "gulp-core",
+  "version": "0.0.0",
+  "description": "gulp core wrapper",
+  "main": "gulp.js",
+  "dependencies": {
+    "merge2": "~0.3.6",
+    "gulp": "^3.9.0"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gulp-hx/gulp-core.git"
+  },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "gulp": "^3.9.0",
-    "merge2": "^0.3.5"
-  }
+  "bugs": {
+    "url": "https://github.com/gulp-hx/gulp-core/issues"
+  },
+  "homepage": "https://github.com/gulp-hx/gulp-core"
 }

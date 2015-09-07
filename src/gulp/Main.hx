@@ -1,7 +1,6 @@
 package gulp;
 import gulp.Gulp;
 import gulp.AGulpStream;
-
 import gulp.Gulp.*;
 
 using gulp.GulpTools;
@@ -17,18 +16,21 @@ using gulp.GulpTools;
     });
 
 
+    'default'.to_task() => @do {
+      trace('ciuppa');
+    }
 
     'task'.to_task() => @do {
       '*.json'.to_src();
     };
 
-    'task'.to_task() => @do(cb) {
+    'taskla'.to_task(['a','b','c']) => @do(cb) {
       trace('hello');
       cb();
     };
 
 
-    task(['a','b','c']) => @do {
+    task('cippalippa',['a','b','c']) => @do {
 
     };
 

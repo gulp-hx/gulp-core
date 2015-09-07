@@ -1,6 +1,6 @@
 -cp src
 -main gulp.Main
--js tmp/main.js
+-js gulpfile.js
 -dce full
 -D analyzer
 -lib jsrequire tink_lang

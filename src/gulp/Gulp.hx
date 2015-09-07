@@ -6,9 +6,9 @@ import gulp.AGulpStream;
 }
 
 
-@:jsRequire("gulp") @:native('gulp') extern class Gulp{
-  @:overload(function(tasks:Array<Dynamic>,fn:(Void->Void)->Void):Dynamic{})
-  @:overload(function(tasks:Array<Dynamic>,fn:Void->Void):Dynamic{})
+@:jsRequire("gulp") @:native('gulp') extern class Gulp {
+  @:overload(function(name:String,tasks:Array<Dynamic>,fn:(Void->Void)->Void):Dynamic{})
+  @:overload(function(name:String,tasks:Array<Dynamic>,fn:Void->Void):Dynamic{})
   @:overload(function(name:String,fn:(Void->Void)->Void):Dynamic{})
   @:overload(function(name:String,fn:Void->Void):Void{})
   public static function task():Void;
