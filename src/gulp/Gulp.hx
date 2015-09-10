@@ -2,6 +2,33 @@ package gulp;
 import gulp.AGulpStream;
 
 
+@:jsRequire("gulp-shell") @:native('gulpShell') extern class GulpShell {
+  @:overload(function(tasks:Array<String>):AGS{})
+  @:overload(function(task:String):AGS{})
+  @:selfCall static public function _():AGS;
+
+
+  @:overload(function(tasks:Array<String>):AGS{})
+  @:overload(function(task:String):AGS{})
+  static public function task():Void;
+
+
+}
+
+@:jsRequire("gulp-run") @:native('gulpRun') extern class ExtGulpRun {
+  @:selfCall static public function _(template:String,?opts:Dynamic):AGS;
+}
+
+class GulpRun {
+  static public inline function _(template:String,?opts:Dynamic):AGS
+    return ExtGulpRun._(template,opts);
+
+  public static function execute(template:String):AGS {
+    return untyped ExtGulpRun._(template).exec();
+  }
+}
+
+
 @:jsRequire("json-manifest") @:native('jsonManifest') extern class JsonManifest {
   @:selfCall static public function _(folder:String,glob:String):AGS;
 }

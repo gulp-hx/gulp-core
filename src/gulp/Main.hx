@@ -10,7 +10,20 @@ using gulp.GulpTools;
   static function main() {
 
 
+      'hello'.to_task() => @do {
+        ''.to_src() << GulpShell._('ls -la') << GulpShell._('ls -la')  << GulpShell._('ls -la');
+      };
+
+      'hello2'.to_task(GulpShell.task(['ls -la','echo "pippa"']));
+
+/*   'hello'.to_task() => @do {
+     GulpRun.execute('echo "ciao"') << GulpRun.execute('echo "ciao"') << GulpRun.execute('echo "ciao"');
+   }
+*/
   'bower'.to_task() => @do {
+
+
+
 
 
     'bower.json'.to_src()
